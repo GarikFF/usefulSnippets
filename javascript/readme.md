@@ -1,5 +1,6 @@
 # Навигация
 * **[decodeExcelColPrefix](decodeExcelColPrefix)** - метод переводит буквенное название столбца Excel (A, B, C) в его соответствующий порядковый номер (0, 1, 2)
+* **[declensionOfNumber](declensionOfNumber)** - метод возвращает переданный текст, склоненный относительно числа
 
 # Сниппеты
 ### decodeExcelColPrefix
@@ -32,3 +33,20 @@
  ```
  
  [Пример использования](https://codepen.io/GarikFF/pen/MpBwXx)
+ 
+ ### declensionOfNumber
+ 
+ ```javascript
+ /**
+  * Возвращает переданный текст, склоненный относительно числа
+  * @param number - число, относительно которого нужно взять склонение
+  * @param titles - массив вариантов склонения, например ['год', 'года', 'лет']
+  * @returns {string} - строка из исходного числа и склоненного варианта, например - "5 лет"
+  */
+ function declensionOfNumber(number, titles) {
+     cases = [2, 0, 1, 1, 1, 2];
+     return [number, titles[ (number%100 > 4 && number%100 < 20) ? 2 : cases[(number%10 < 5) ? number%10 : 5] ]].join(' ');
+ }
+ ```
+ [Пример использования](http://codepen.io/GarikFF/pen/LWBpVW)
+ 
