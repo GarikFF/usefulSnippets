@@ -10,7 +10,6 @@
   * Функция переводит буквенное название столбца Excel (A, B, C)
   * в его соответствующий порядковый номер (0, 1, 2)
   * @param prefix - буквенный код
-  * @param prefix - буквенный код
   * @returns {number|boolean}
   */
  function decodeExcelColPrefix(prefix) {
