@@ -1,7 +1,7 @@
 # Навигация
 * **[decodeExcelColPrefix](#decodeExcelColPrefix)** - функция переводит буквенное название столбца Excel (A, B, C) в его соответствующий порядковый номер (0, 1, 2)
 * **[declensionOfNumber](#declensionOfNumber)** - функция возвращает переданный текст, склоненный относительно числа
-* **[divideNumberByPieces](#divideNumberByPieces)** - Добавляет пробел в целое число
+* **[divideNumberByPieces](#divideNumberByPieces)** - добавляет пробел в целое число
 
 # Функции
 ### decodeExcelColPrefix
