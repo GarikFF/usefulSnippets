@@ -1,8 +1,9 @@
 # Навигация
-* **[decodeExcelColPrefix](decodeExcelColPrefix)** - функция переводит буквенное название столбца Excel (A, B, C) в его соответствующий порядковый номер (0, 1, 2)
-* **[declensionOfNumber](declensionOfNumber)** - функция возвращает переданный текст, склоненный относительно числа
+* **[decodeExcelColPrefix](#decodeexcelcolprefix)** - функция переводит буквенное название столбца Excel (A, B, C) в его соответствующий порядковый номер (0, 1, 2)
+* **[declensionOfNumber](#declensionofnumber)** - функция возвращает переданный текст, склоненный относительно числа
+* **[divideNumberByPieces](#dividenumberbypieces)** - делит число разделителем на разряды
 
-# Сниппеты
+# Функции
 ### decodeExcelColPrefix
 
 ```javascript
@@ -37,7 +38,7 @@
  ### declensionOfNumber
  
  ```javascript
- /**
+/**
   * Функция возвращает переданный текст, склоненный относительно числа
   * @param number - число, относительно которого нужно взять склонение
   * @param titles - массив вариантов склонения, например ['год', 'года', 'лет']
@@ -49,4 +50,20 @@
  }
  ```
  [Пример использования](http://codepen.io/GarikFF/pen/LWBpVW)
+ 
+### divideNumberByPieces
+  
+```javascript
+/**
+  * Делит число разделителем на разряды
+  * http://stackoverflow.com/a/16637170
+  * @param x - число
+  * @param del - разделитель
+  * @returns {string}
+  */
+function divideNumberByPieces(x, delimiter) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || " ");
+}
+```
+ [Пример использования](http://codepen.io/GarikFF/pen/QpBaBd)
  
