@@ -1,7 +1,7 @@
 # Навигация
 * **[decodeExcelColPrefix](#decodeexcelcolprefix)** - функция переводит буквенное название столбца Excel (A, B, C) в его соответствующий порядковый номер (0, 1, 2)
 * **[declensionOfNumber](#declensionofnumber)** - функция возвращает переданный текст, склоненный относительно числа
-* **[divideNumberByPieces](#dividenumberbypieces)** - добавляет пробел в целое число
+* **[divideNumberByPieces](#dividenumberbypieces)** - делит число разделителем на разряды
 
 # Функции
 ### decodeExcelColPrefix
@@ -55,7 +55,7 @@
   
 ```javascript
 /**
-  * Делит число на разряды разделителем
+  * Делит число разделителем на разряды
   * http://stackoverflow.com/a/16637170
   * @param x - число
   * @param del - разделитель
